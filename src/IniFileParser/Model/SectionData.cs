@@ -47,7 +47,11 @@ namespace IniParser.Model
         /// <param name="searchComparer">
         ///     Search comparer.
         /// </param>
+#if WindowsCE
+        public SectionData(SectionData ori, IEqualityComparer<string> searchComparer)
+#else
         public SectionData(SectionData ori, IEqualityComparer<string> searchComparer = null)
+#endif //WindowsCE
         {
             SectionName = ori.SectionName;
 
@@ -197,7 +201,11 @@ namespace IniParser.Model
         /// </returns>
         public object Clone()
         {
+#if WindowsCE
+            return new SectionData(this, null);
+#else
             return new SectionData(this);
+#endif //WindowsCE
         }
 
         #endregion

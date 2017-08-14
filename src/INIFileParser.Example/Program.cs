@@ -54,14 +54,18 @@ namespace INIFileParser.Example
             // Uncomment this to change the new line string used to write the ini file to disk to 
             // force use the windows style new line
             //modifiedParsedData.Configuration.NewLineStr = "\r\n";
+#if WindowsCE
+            fileIniData.WriteFile("NewTestIniFile.ini", modifiedParsedData, null);
+#else
             fileIniData.WriteFile("NewTestIniFile.ini", modifiedParsedData);
+#endif
         }
 
         static IniData ModifyINIData(IniData modifiedParsedData)
         {
             modifiedParsedData["GeneralConfiguration"]["setMaxErrors"] = "10";
             modifiedParsedData.Sections.AddSection("newSection");
-            modifiedParsedData.Sections.GetSectionData("newSection").LeadingComments
+            modifiedParsedData.Sections.GetSectionData("newSection").Comments
                 .Add("This is a new comment for the section");
             modifiedParsedData.Sections.GetSectionData("newSection").Keys.AddKey("myNewKey", "value");
             modifiedParsedData.Sections.GetSectionData("newSection").Keys.GetKeyData("myNewKey").Comments

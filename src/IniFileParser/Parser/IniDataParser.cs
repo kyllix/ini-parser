@@ -103,7 +103,11 @@ namespace IniParser.Parser
 
             try
             {
+#if WindowsCE
+                var lines = iniDataString.Split(new[] { '\n' });
+#else
                 var lines = iniDataString.Split(new []{"\n", "\r\n"}, StringSplitOptions.None);
+#endif
                 for (int lineNumber = 0; lineNumber < lines.Length; lineNumber++)
                 {
                     var line = lines[lineNumber];

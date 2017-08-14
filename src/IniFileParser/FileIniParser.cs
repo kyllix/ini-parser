@@ -118,7 +118,11 @@ namespace IniParser
         /// <param name="fileEncoding">
         ///     Specifies the encoding used to create the file.
         /// </param>
+#if WindowsCE
+        public void WriteFile(string filePath, IniData parsedData, Encoding fileEncoding)
+#else
         public void WriteFile(string filePath, IniData parsedData, Encoding fileEncoding = null)
+#endif //WindowsCE
         {
             // The default value can't be assigned as a default parameter value because it is not
             // a constant expression.

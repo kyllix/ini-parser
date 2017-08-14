@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniFileParserCF", "IniFileParserCF\IniFileParserCF.csproj", "{FDB9724D-1190-4307-A8EE-23D56A23CC9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INIFileParserCF.Example", "INIFileParserCF.Example\INIFileParserCF.Example.csproj", "{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDB9724D-1190-4307-A8EE-23D56A23CC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB9724D-1190-4307-A8EE-23D56A23CC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB9724D-1190-4307-A8EE-23D56A23CC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB9724D-1190-4307-A8EE-23D56A23CC9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CEC4AC-B4B8-42B6-8131-CC1A3DB1193A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
